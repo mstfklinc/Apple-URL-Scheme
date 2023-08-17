@@ -61,7 +61,7 @@ struct ContentView: View {
 
     private func startVideoFaceTimeCallAction() {
         
-        if let facetimeURL : NSURL = NSURL(string: "facetime://+905458422137"){
+        if let facetimeURL : NSURL = NSURL(string: "facetime://telefonnumarası"){
             let application : UIApplication = UIApplication.shared
             if(application.canOpenURL(facetimeURL as URL)) {
                 application.open(facetimeURL as URL)
@@ -74,7 +74,7 @@ struct ContentView: View {
     
     //MARK: Apple URL Scheme butonundaki context view sesli FaceTime araması yapan method
     private func startAudioFaceTimeCallAction() {
-        if let faceTimeAudioURL : NSURL = NSURL(string: "facetime-audio://+905458422137"){
+        if let faceTimeAudioURL : NSURL = NSURL(string: "facetime-audio://telefonnumarası"){
             let application : UIApplication = UIApplication.shared
             if (application.canOpenURL(faceTimeAudioURL as URL)) {
                 application.open(faceTimeAudioURL as URL)
@@ -109,7 +109,7 @@ extension ContentView {
         let viewController = UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController
         let composeViewController = MFMessageComposeViewController()
         composeViewController.messageComposeDelegate = messageComposeDelegate
-        composeViewController.recipients = ["+905458422137"]
+        composeViewController.recipients = ["telefonnumarası"]
         composeViewController.body = smsMessage
         viewController?.present(composeViewController, animated: true)
         
@@ -135,7 +135,7 @@ extension ContentView {
         
         let viewController = UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController
         let composeViewController = MFMailComposeViewController()
-        composeViewController.setToRecipients(["hamideer36@gmail.com"])
+        composeViewController.setToRecipients(["telefonnumarası"])
         composeViewController.setMessageBody(smsMessage, isHTML: true)
         composeViewController.mailComposeDelegate = mailComposeDelegate
         
