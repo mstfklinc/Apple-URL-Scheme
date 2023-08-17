@@ -11,7 +11,6 @@ import MessageUI
 struct ContentView: View {
     
     @State var smsMessage = "Merhaba, toplantıya katılacak mısınız?"
-    @State var emailMessage = "Merhaba, toplantıya katılacak mısınız?"
     
     private let messageComposeDelegate = MessageComposerDelegate()
     private let mailComposeDelegate = MailComposerDelegate()
