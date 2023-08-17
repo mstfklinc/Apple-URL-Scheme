@@ -57,7 +57,7 @@ struct ContentView: View {
         .padding()
     }
     
-    //MARK: Kişi Bilgisi kısmındaki context view görüntülü FaceTime araması yapan method
+    //MARK: Apple URL Scheme butonundaki context view görüntülü FaceTime araması yapan method
 
     private func startVideoFaceTimeCallAction() {
         
@@ -72,7 +72,7 @@ struct ContentView: View {
       
     }
     
-    //MARK: Kişi Bilgisi kısmındaki context view sesli FaceTime araması yapan method
+    //MARK: Apple URL Scheme butonundaki context view sesli FaceTime araması yapan method
     private func startAudioFaceTimeCallAction() {
         if let faceTimeAudioURL : NSURL = NSURL(string: "facetime-audio://+905458422137"){
             let application : UIApplication = UIApplication.shared
@@ -87,7 +87,7 @@ struct ContentView: View {
     
 }
 
-//MARK: Kişi Bilgisi kısmındaki context view ile sms göndermek için ContackInfoView'e yazılan extansion
+//MARK: Apple URL Scheme butonundaki context view ile sms göndermek için ContackInfoView'e yazılan extansion
 
 extension ContentView {
     
@@ -117,7 +117,7 @@ extension ContentView {
     
 }
 
-//MARK: Kişi Bilgisi kısmındaki context view ile e-mail göndermek için ContackInfoView'e yazılan extansion
+//MARK: Apple URL Scheme butonundaki context view ile e-mail göndermek için ContackInfoView'e yazılan extansion
 
 extension ContentView {
     
